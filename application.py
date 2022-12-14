@@ -1,12 +1,12 @@
 
 import os
-from flask import Flask,redirect
+from flask import Flask, request, url_for, redirect, render_template
 
 application = Flask(__name__)
 
 @application.route('/')
 def hello():
-    return redirect("http://www.google.com")
+    return redirect(url_for('Main'))
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
